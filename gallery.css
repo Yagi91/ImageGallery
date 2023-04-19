@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: repeating-linear-gradient(to right,
+            #f6ba52,
+            #f6ba52 45%,
+            #fff 45%,
+            #fff 55%,
+            #56a6ed 55%,
+            #56a6ed 100%);
+    padding: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.filter-form>label {
+    margin: 0 10px;
+}
+
+.filter-form>label>input {
+    margin-right: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.child {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.child:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+.child::before {
+    content: '[Click to Expand]';
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.child:hover::before {
+    opacity: 1;
+}
+
+
+.child>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.child:hover>img {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    display: none;
+    animation: openModal 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes openModal {
+    0% {
+        width: 0;
+        height: 0;
+        transform: scale(0);
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    height: 75%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+.modal-content>span {
+    position: absolute;
+    top: 10px;
+    background-color: red;
+    right: 10px;
+    font-size: 2rem;
+    display: block;
+    line-height: 0.7;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-content>span:hover {
+    background-color: #333;
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+
+.modal-content>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 70%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+/* .modal.show {
+    opacity: 1;
+    visibility: visible;
+} */

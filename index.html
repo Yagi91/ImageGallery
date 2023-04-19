@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css" />
+    <script src="gallery.js" defer></script>
+</head>
+
+<body>
+    <h1 class="title">IMAGE GALLERY</h1>
+    <main>
+        <div class="modal" id="modal">
+            <div class="modal-content" id="modal-content">
+                <span class="close" onclick="hideModal()">&times;</span>
+                <img src="" alt="" id="modalImg" />
+            </div>
+        </div>
+        <div class="filter">
+            <form action="" class="filter-form">
+                <label>
+                    <input type="radio" name="filter" value="all" checked />
+                    All
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="landscape" />
+                    Landscape
+
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="portrait" />
+                    Portrait
+                </label>
+
+                <label>
+                    <input type="radio" name="filter" value="square" />
+                    Square
+                </label>
+
+                <label>
+                    <input type="radio" name="filter" value="panorama" />
+                    Panorama
+                </label>
+
+            </form>
+        </div>
+        <section class="parent gallery">
+            <div class="child">
+                <img src="assets/images/01.jpg" alt="image 1" />
+            </div>
+            <div class="child">
+                <img src="assets/images/02.jpg" alt="image 2" />
+            </div>
+            <div class="child">
+                <img src="assets/images/03.jpg" alt="image 3" />
+            </div>
+            <div class="child">
+                <img src="assets/images/04.jpg" alt="image 4" />
+            </div>
+            <div class="child">
+                <img src="assets/images/05.jpg" alt="image 5" />
+            </div>
+            <div class="child">
+                <img src="assets/images/06.jpg" alt="image 6" />
+            </div>
+            <div class="child">
+                <img src="assets/images/07.jpg" alt="image 7" />
+            </div>
+            <div class="child">
+                <img src="assets/images/08.jpg" alt="image 8" />
+            </div>
+            <div class="child">
+                <img src="assets/images/09.jpg" alt="image 9" />
+            </div>
+            <div class="child">
+                <img src="assets/images/10.jpg" alt="image 10" />
+            </div>
+            <div class="child">
+                <img src="assets/images/11.jpg" alt="image 11" />
+            </div>
+            <div class="child">
+                <img src="assets/images/12.jpg" alt="image 12" />
+            </div>
+            <div class="child">
+                <img src="assets/images/13.jpg" alt="image 13" />
+            </div>
+        </section>
+        </div>
+    </main>
+</body>
+
+</html>
