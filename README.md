@@ -1,6 +1,7 @@
 A simple image gallery UI
 ![image](https://user-images.githubusercontent.com/84844806/232941835-f18ac4e6-5229-4d5c-bf49-bb72aee3c98b.png)
-![image](https://user-images.githubusercontent.com/84844806/232941910-26f197cf-e428-440f-8b0a-79a6d8a352c5.png)
+![image](https://user-images.githubusercontent.com/84844806/232944339-9d44b2cb-2089-4253-8715-6aa3e2102283.png)
+
 
 # Image Gallery
 
